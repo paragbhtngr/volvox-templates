@@ -1,0 +1,33 @@
+@mixin button-outline($col) {
+  color: $col;
+  border: 2px solid $col;
+  background: transparent;
+  &:hover {
+    color: $col;
+    border: 2px solid $col;
+    background: darken($col, 35%);
+  }
+  &:active {
+    color: darken($col, 35%);
+    ;
+    border: 2px solid darken($col, 35%);
+    background: transparent;
+  }
+}
+
+@mixin button-filled($col) {
+  color: $volvox-white-color;
+  border: 2px solid darken($col, 35%);
+  background: darken($col, 35%);
+  &:hover {
+    color: darken($col, 35%);
+    border: 2px solid $col;
+    background: $col;
+  }
+  &:active {
+    color: $col;
+    border: 2px solid darken($col, 45%);
+    background: darken($col, 45%);
+  }
+}
+

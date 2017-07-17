@@ -2,304 +2,367 @@
 @import "https://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
-
 @import "https://fonts.googleapis.com/css?family=Exo+2|Raleway:300,400,700";
-
-$volvox-font: 'Exo 2', 'Exo', 'Armata', 'Segoe UI', 'Ubuntu', sans-serif;
-$volvox-heading-font: 'Raleway', 'Proxima Nova', 'Avenir', 'Roboto', 'Arial', sans-serif;
-$volvox-body-font: 'Raleway', 'Proxima Nova', 'Avenir', 'Roboto', 'Arial', sans-serif;
-
+$volvox-font: 'Exo 2',
+'Exo',
+'Armata',
+'Segoe UI',
+'Ubuntu',
+sans-serif;
+$volvox-heading-font: 'Raleway',
+'Proxima Nova',
+'Avenir',
+'Roboto',
+'Arial',
+sans-serif;
+$volvox-body-font: 'Raleway',
+'Proxima Nova',
+'Avenir',
+'Roboto',
+'Arial',
+sans-serif;
 $sidebar-width: 300px;
-
 @import 'colors';
 @import 'buttons';
-
-html, body, {
-  background: $volvox-grey-color;
-  h1, h2 {
-    color: $volvox-white-color;
-    font-family: $volvox-font;
-    font-weight: normal;
-    color: $volvox-green-color;
-  }
-  h3, h4, h5, h6, p {
-    color: $volvox-white-color;
-    font-family: $volvox-heading-font;
-  }
+html,
+body,
+{
+    background: $volvox-grey-color;
+    h1,
+    h2 {
+        color: $volvox-white-color;
+        font-family: $volvox-font;
+        font-weight: normal;
+        color: $volvox-green-color;
+    }
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: $volvox-white-color;
+        font-family: $volvox-heading-font;
+    }
 }
 
 .panel {
-  margin: 20px;
-  padding: 20px; // border: 1px solid $volvox-grey-color;
-  border-radius: 5px;
-  background: $volvox-grey-very-dark-color;
+    margin: 20px;
+    padding: 20px; // border: 1px solid $volvox-grey-color;
+    border-radius: 5px;
+    background: $volvox-grey-very-dark-color;
 }
 
-
 .volvox-modal {
-  .modal-content {
-    border-radius: 10px 10px 10px 10px;
-    background: $volvox-grey-dark-color;
-  }
-  .modal-header {
-    background: $volvox-grey-very-dark-color;
-    color: $volvox-white-color;
-    font-family: $volvox-font;
-    border-bottom-color: $volvox-grey-dark-color;
-    border-radius: 10px 10px 0px 0px;
-    .close {
-      color: $volvox-green-color;
+    .modal-content {
+        border-radius: 10px 10px 10px 10px;
+        background: $volvox-grey-dark-color;
     }
-  }
-  .modal-body {
-    background: $volvox-grey-very-dark-color;
-    color: $volvox-white-color;
-  }
-  .modal-footer {
-    border-top-color: $volvox-grey-dark-color;
-    background: $volvox-grey-very-dark-color;
-    color: $volvox-white-color;
-  }
+    .modal-header {
+        background: $volvox-grey-very-dark-color;
+        color: $volvox-white-color;
+        font-family: $volvox-font;
+        border-bottom-color: $volvox-grey-dark-color;
+        border-radius: 10px 10px 0px 0px;
+        .close {
+            color: $volvox-green-color;
+        }
+    }
+    .modal-body {
+        background: $volvox-grey-very-dark-color;
+        color: $volvox-white-color;
+    }
+    .modal-footer {
+        border-top-color: $volvox-grey-dark-color;
+        background: $volvox-grey-very-dark-color;
+        color: $volvox-white-color;
+    }
 }
 
 .volvox-button {
-  font-family: $volvox-font;
-  font-size: 1em;
-  padding: 5px 15px 5px 15px;
-  -webkit-transition-duration: 0.125s;
-  /* Safari */
-  transition-duration: 0.125s;
-  @include button-outline($volvox-green-color);
-  &.red { @include button-outline($red-color); }
-  &.pink { @include button-outline($pink-color); }
-  &.purple { @include button-outline($purple-color); }
-  &.blue { @include button-outline($blue-color); }
-  &.yellow { @include button-outline($yellow-color); }
-  &.orange { @include button-outline($deep-orange-color); }
-  &.grey { @include button-outline($blue-grey-color); }
-  &.filled { 
-    @include button-filled($volvox-green-color);
-    &.red { @include button-filled($red-color); }
-    &.pink { @include button-filled($pink-color); }
-    &.purple { @include button-filled($purple-color); }
-    &.blue { @include button-filled($blue-color); }
-    &.yellow { @include button-filled($yellow-color); }
-    &.orange { @include button-filled($deep-orange-color); }
-    &.grey { @include button-filled($blue-grey-color); }
-  } // @include gradient-background($volvox-gradient-g1, $volvox-gradient-g2, $volvox-gradient-g3);    
-  &.large { padding: 10px 15px 10px 15px; }
-  &:focus { outline: 0; }
-  &.rounded { border-radius: 200px; }
-  &.padded { margin: 15px; }
-  &.capitalized { text-transform: uppercase; }
-  &.right-attached {
-    border-radius: 200px 0px 0px 200px;
-    margin-right: -3px;
-  }
-  &.left-attached {
-    border-radius: 0px 200px 200px 0px;
-    margin-left: -3px;
-  }
+    font-family: $volvox-font;
+    font-size: 1em;
+    padding: 5px 15px 5px 15px;
+    -webkit-transition-duration: 0.125s;
+    /* Safari */
+    transition-duration: 0.125s;
+    @include button-outline($volvox-green-color);
+    &.red {
+        @include button-outline($red-color);
+    }
+    &.pink {
+        @include button-outline($pink-color);
+    }
+    &.purple {
+        @include button-outline($purple-color);
+    }
+    &.blue {
+        @include button-outline($blue-color);
+    }
+    &.yellow {
+        @include button-outline($yellow-color);
+    }
+    &.orange {
+        @include button-outline($deep-orange-color);
+    }
+    &.grey {
+        @include button-outline($blue-grey-color);
+    }
+    &.filled {
+        @include button-filled($volvox-green-color);
+        &.red {
+            @include button-filled($red-color);
+        }
+        &.pink {
+            @include button-filled($pink-color);
+        }
+        &.purple {
+            @include button-filled($purple-color);
+        }
+        &.blue {
+            @include button-filled($blue-color);
+        }
+        &.yellow {
+            @include button-filled($yellow-color);
+        }
+        &.orange {
+            @include button-filled($deep-orange-color);
+        }
+        &.grey {
+            @include button-filled($blue-grey-color);
+        }
+    } // @include gradient-background($volvox-gradient-g1, $volvox-gradient-g2, $volvox-gradient-g3);
+    &.large {
+        padding: 10px 15px 10px 15px;
+    }
+    &:focus {
+        outline: 0;
+    }
+    &.rounded {
+        border-radius: 200px;
+    }
+    &.padded {
+        margin: 15px;
+    }
+    &.capitalized {
+        text-transform: uppercase;
+    }
+    &.right-attached {
+        border-radius: 200px 0px 0px 200px;
+        margin-right: -3px;
+    }
+    &.left-attached {
+        border-radius: 0px 200px 200px 0px;
+        margin-left: -3px;
+    }
 }
 
 #wrapper {
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  padding-left: 0;
-  transition: all 0.5s ease;
-  display: flex;
-
-  #page-content-wrapper {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    padding-left: 60px;
-  }
-
-  #sidebar-wrapper {
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    background: $volvox-black-color;
-    width: 65px;
-    display: block;
-    flex-shrink: 0;
-    height: 100%;
-    overflow: hidden;
-    
-    ul {
-      list-style: none;
-      width: $sidebar-width;
-      .sidebar-list {
-        padding-top: 10px;
-        width: $sidebar-width;
-        li {
-          width: $sidebar-width;
-          a {
-            display: block;
-            width: $sidebar-width;
-            font-size: 18px;
-            padding: 10px 0px 10px 0px;
-            &:hover, &:active {
-              background: $volvox-grey-very-dark-color;
-            }
-            i {
-              font-size: 24px;
-              padding-left: 20px;
-              padding-right: 40px;
-            } 
-          }
-          &.dropdown {
-            -moz-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            -webkit-transition: all 0.5s ease;
-            ul.dropdown-menu {
-              -moz-transition: all 0.5s ease;
-              -o-transition: all 0.5s ease;
-              -webkit-transition: all 0.5s ease;
-              height: 0px;
-              overflow: hidden;
-            }
-          }
-          &.dropdown.open {                    
-            -moz-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            -webkit-transition: all 0.5s ease;
-            a.dropdown-toggle {
-              background: $volvox-grey-very-dark-color;
-            }
-            ul.dropdown-menu {
-              li {
-                background: $volvox-grey-very-dark-color;
-
-                a {
-                  padding-left: 20px;
-                  background: $volvox-grey-very-dark-color;   
-                  &:hover {
-                    background: $volvox-grey-dark-color;
-                    color: $volvox-grey-color;
-                  }
-                }
-              }
-              -moz-transition: all 0.5s ease;
-              -o-transition: all 0.5s ease;
-              -webkit-transition: all 0.5s ease;
-              height: 100%;
-              margin-top: 0px;
-              margin-bottom: 10px;
-              position: relative;
-              display: block;
-              background: $volvox-grey-very-dark-color;
-
-            }
-          }
-        }
-      }
-    }
-
-    #menu-toggle {
-      text-align: right;
-      float: right;
-      padding: 20px;
-    }
-  }
-
-  &.toggled {
-    #sidebar-wrapper {
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -webkit-transition: all 0.5s ease;
-      overflow: hidden;
-      width: $sidebar-width;
-    }
-
+    padding-left: 0;
+    transition: all 0.5s ease;
+    display: flex;
     #page-content-wrapper {
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -webkit-transition: all 0.5s ease;
-      padding-left: $sidebar-width;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        padding-left: 60px;
     }
-  }
+    #sidebar-wrapper {
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        background: $volvox-black-color;
+        width: 65px;
+        display: block;
+        flex-shrink: 0;
+        height: 100%;
+        overflow: hidden;
+        ul {
+            list-style: none;
+            width: $sidebar-width;
+            .sidebar-list {
+                padding-top: 10px;
+                width: $sidebar-width;
+                li {
+                    width: $sidebar-width;
+                    a {
+                        display: block;
+                        width: $sidebar-width;
+                        font-size: 18px;
+                        padding: 10px 0px 10px 0px;
+                        &:hover,
+                        &:active {
+                            background: $volvox-grey-very-dark-color;
+                        }
+                        i {
+                            font-size: 24px;
+                            padding-left: 22px;
+                            padding-right: 44px;
+                        }
+                    }
+                    &.dropdown {
+                        -moz-transition: all 0.5s ease;
+                        -o-transition: all 0.5s ease;
+                        -webkit-transition: all 0.5s ease;
+                        ul.dropdown-menu {
+                            -moz-transition: all 0.5s ease;
+                            -o-transition: all 0.5s ease;
+                            -webkit-transition: all 0.5s ease;
+                            height: 0px;
+                            overflow: hidden;
+                        }
+                    }
+                    &.dropdown.open {
+                        -moz-transition: all 0.5s ease;
+                        -o-transition: all 0.5s ease;
+                        -webkit-transition: all 0.5s ease;
+                        a.dropdown-toggle {
+                            background: $volvox-grey-very-dark-color;
+                        }
+                        ul.dropdown-menu {
+                            li {
+                                background: $volvox-grey-very-dark-color;
+                                a {
+                                    padding-left: 20px;
+                                    background: $volvox-grey-very-dark-color;
+                                    &:hover {
+                                        background: $volvox-grey-dark-color;
+                                        color: $volvox-grey-color;
+                                    }
+                                }
+                            }
+                            -moz-transition: all 0.5s ease;
+                            -o-transition: all 0.5s ease;
+                            -webkit-transition: all 0.5s ease;
+                            height: 100%;
+                            margin-top: 0px;
+                            margin-bottom: 10px;
+                            position: relative;
+                            display: block;
+                            background: $volvox-grey-very-dark-color;
+                        }
+                    }
+                }
+            }
+        }
+        #menu-toggle {
+            text-align: right;
+            float: right;
+            padding: 20px;
+        }
+    }
+    &.toggled {
+        #sidebar-wrapper {
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            overflow: hidden;
+            width: $sidebar-width;
+        }
+        #page-content-wrapper {
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            padding-left: $sidebar-width;
+        }
+    }
 }
 
+
 /*-------------------------------*/
+
+
 /*       Hamburger-Cross         */
+
+
 /*-------------------------------*/
 
 // HAMBURGER COLOR
 $text-color: #fff;
 $hamburger-color-closed: $text-color;
 $hamburger-color-open: $text-color;
-
 .hamburger {
-  background: transparent;
-  border: none;
-  display: block;
-  height: 24px;
-  margin-left: 15px;
-  width: 24px;
-  z-index: 999;
-  &:hover {outline: none;}
-  &:focus {outline: none;}
-  &:active {outline: none;}
-  &.is-closed {
+    background: transparent;
+    border: none;
+    display: block;
+    height: 24px;
+    margin-left: 15px;
+    width: 24px;
+    z-index: 999;
+    &:hover {
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        outline: none;
+    }
+    &.is-closed {
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        margin-left: 24px;
+        margin-top: 20px;
+        .hamb-top {
+            -webkit-transition: all .35s ease-in-out;
+            background-color: $hamburger-color-closed;
+            margin-left: -15px;
+            top: 5px;
+        }
+        .hamb-middle {
+            background-color: $hamburger-color-closed;
+            margin-top: -1px;
+            margin-left: -15px;
+        }
+        .hamb-bottom {
+            -webkit-transition: all .35s ease-in-out;
+            background-color: $hamburger-color-closed;
+            bottom: 5px;
+            margin-left: -15px;
+        }
+    }
+}
+
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+    height: 2px;
+    position: absolute;
+    width: 24px;
+}
+
+.hamburger.is-open {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    margin-left: 24px;
+    margin-left: calc(#{$sidebar-width}-35px);
     margin-top: 20px;
     .hamb-top {
-      -webkit-transition: all .35s ease-in-out;
-      background-color: $hamburger-color-closed;
-      margin-left: -15px;
-      top: 5px;
+        -webkit-transform: rotate(45deg);
+        -webkit-transition: transform .2s cubic-bezier(.73, 1, .28, .08);
+        background-color: $hamburger-color-open;
+        margin-top: -2px;
+        margin-left: -15px;
+        top: 50%;
     }
     .hamb-middle {
-      background-color: $hamburger-color-closed;
-      margin-top: -1px;
-      margin-left: -15px;
+        background-color: $hamburger-color-open;
+        display: none;
+        margin-left: -15px;
     }
     .hamb-bottom {
-      -webkit-transition: all .35s ease-in-out;
-      background-color: $hamburger-color-closed;
-      bottom: 5px;
-      margin-left: -15px;
+        -webkit-transform: rotate(-45deg);
+        -webkit-transition: transform .2s cubic-bezier(.73, 1, .28, .08);
+        // background-color: #1a1a1a;
+        background-color: $hamburger-color-open;
+        margin-top: -2px;
+        top: 50%;
+        margin-left: -15px;
     }
-  }
-}
-
-.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom  {
-  height: 2px;
-  position: absolute;
-  width: 24px;
-}
-.hamburger.is-open {
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  margin-left: calc(#{$sidebar-width}-35px);
-  margin-top: 20px;
-  .hamb-top {
-    -webkit-transform: rotate(45deg);
-    -webkit-transition: transform .2s cubic-bezier(.73,1,.28,.08);
-    background-color: $hamburger-color-open;
-    margin-top: -2px;
-    margin-left: -15px;
-    top: 50%;
-  }
-  .hamb-middle {
-    background-color: $hamburger-color-open;
-    display: none;
-    margin-left: -15px;
-  }
-  .hamb-bottom {
-    -webkit-transform: rotate(-45deg);
-    -webkit-transition: transform .2s cubic-bezier(.73,1,.28,.08);
-    // background-color: #1a1a1a;
-    background-color: $hamburger-color-open;
-    margin-top: -2px;
-    top: 50%;
-    margin-left: -15px;
-  }
 }
